@@ -1,4 +1,4 @@
-CREATE TABLE "Account" (
+CREATE TABLE "accounts" (
   "id" bigserial PRIMARY KEY,
   "owner" varchar NOT NULL,
   "balance" bigint NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE "transfers" (
   "created_at" timestampz NOT NULL DEFAULT (now())
 );
 
-CREATE INDEX ON "Account" ("owner");
+CREATE INDEX ON "accounts" ("owner");
 
 CREATE INDEX ON "entries" ("account_id");
 
